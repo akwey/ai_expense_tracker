@@ -34,8 +34,8 @@ const RecordItem = ({ record }: { record: Record }) => {
 
   // Determine border color based on expense amount
   const getBorderColor = (amount: number) => {
-    if (amount > 100) return 'border-red-500'; // High expense
-    if (amount > 50) return 'border-yellow-500'; // Medium expense
+    if (amount > 1000) return 'border-red-500'; // High expense
+    if (amount > 500) return 'border-yellow-500'; // Medium expense
     return 'border-green-500'; // Low expense
   };
 
@@ -83,7 +83,7 @@ const RecordItem = ({ record }: { record: Record }) => {
               {new Date(record?.date).toLocaleDateString()}
             </span>
             <span className='text-lg sm:text-xl font-bold text-gray-900 dark:text-gray-100'>
-              ${record?.amount.toFixed(2)}
+             ₹ {record?.amount.toFixed(2)}
             </span>
           </div>
 
